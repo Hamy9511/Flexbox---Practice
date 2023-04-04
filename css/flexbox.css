@@ -57,7 +57,25 @@
     width: 23%; /*se utiliza 23% porque em esta configuracion de wrap si deseo colocar 4 elementos en una linea del bloque del 100% cada uno deberia de tener 25% para que queden justos pero se bajan dos px para dejar un espacio entre cada elemento*/
 }
 
-/*Responsive*/
+.videoSobre .container{
+    display: flex;
+}
+.videoSobre-sobre{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.videoSobre-video{
+    flex-grow: 2; /*Toma el espacio que sobra entre elemntos de la misma linea del bloque donde estan alineados, en este caso le dijimos un incremento de 2*/
+    flex-shrink: 2; /*Disminuye el espacio, lo contrario del grow, se usa aqui porque cada vez que se encoja la resolucion soltara el espacio entre elementos del bloque*/
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 2; /*Dos espacios entre el boton y el texto, ya que aqui tenemos un flex column*/
+}
+
+
+/*Responsive-----------------------------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) { /*Te convierte estos cambios solamente en resoluciones mayores a 768px*/
     
@@ -102,5 +120,14 @@
 }
 .rodapePrincipal-contatoForm-fieldset{
     justify-content: center;
+}
+
+.headerPrincipal-nav-link-app{
+    order: -1;
+
+}
+.videoSobre .container{
+    display: flex;
+    flex-direction: column;
 }
 }
