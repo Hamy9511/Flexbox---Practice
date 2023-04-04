@@ -54,5 +54,53 @@
 
 .contenidoPrincipal-cursos-link{ /*Se crea porque en la etiqueta anterior al usar flex hay un position absolute que rompe el flex y no determina el tamaño correcto de cada item del bloque*/
     display: flex;
-    width: 23%;
+    width: 23%; /*se utiliza 23% porque em esta configuracion de wrap si deseo colocar 4 elementos en una linea del bloque del 100% cada uno deberia de tener 25% para que queden justos pero se bajan dos px para dejar un espacio entre cada elemento*/
+}
+
+/*Responsive*/
+
+@media (max-width:768px) { /*Te convierte estos cambios solamente en resoluciones mayores a 768px*/
+    
+
+.headerPrincipal .container{
+    flex-direction: column;
+    align-items: initial; /*Vuelve a su alineacion inicial*/
+    text-align: center;
+}
+
+.headerPrincipal-nav{
+    flex-direction: column;
+
+}
+
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenidoPrincipal-cursos-link{
+    width: 100%;
+}
+
+.rodapePrincipal-navMap-list{
+    height: auto;
+    flex-wrap: nowrap;
+}
+.rodapePrincipal-patrocinadores .container{
+    flex-direction: column;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    width: 100%;
+
+}
+.rodapePrincipal-patrocinadores-list{
+    align-items: center;
+    width: 100%;
+    margin: 0%;
+
+}
+.rodapePrincipal-contatoForm-fieldset{
+    justify-content: center;
+}
 }
