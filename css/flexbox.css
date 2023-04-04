@@ -1,0 +1,58 @@
+/*.headerPrincipal-titulo{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerPrincipal-nav{
+    display: inline-block;  /alinear los elementos como en linea /
+    vertical-align: middle; /Alinea  verticalmente en el centro los elementos del bloque/
+    
+
+
+}
+*/
+
+.headerPrincipal .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Genera un espacio entre los elementos del bloque, viene junto display flex*/
+}
+
+.headerPrincipal-nav{
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%; /*Le indicamos al navegador que los elementos de la lista representan 3/4 partes del bloque*/
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    flex-wrap: wrap; /*Quiebra o divide las columnas cada 250px*/
+}
+
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link{ /*Se crea porque en la etiqueta anterior al usar flex hay un position absolute que rompe el flex y no determina el tamaño correcto de cada item del bloque*/
+    display: flex;
+    width: 23%;
+}
